@@ -1,5 +1,5 @@
 # FedHMMs
-# ================================================================
+ ================================================================
 #  Federated Hidden Markov Models for Privacy-Preserving Analysis
 #  of Governance Action Sequences
 #
