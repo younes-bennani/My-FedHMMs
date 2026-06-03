@@ -1,19 +1,23 @@
-# FedHMMs
- ================================================================
+"""
+fedhmm.py
+═════════════════════════════════════════════════════════════════════
 Federated Hidden Markov Models for Privacy-Preserving Analysis of
 Governance Action Sequences.
 
 Implements the four algorithms described in:
-  Hemmati & Bennani, "Federated Hidden Markov Models for
-  Privacy-Preserving Analysis of Governance Action Sequences", 2025.
+  Y. Hemmati & Y. Bennani, "Federated Hidden Markov Models", 2026.
 
 Algorithms
 ----------
-  [0] Centralised     : Baum-Welch on all pooled data (oracle upper bound)
-  [1] Local-HMM       : independent Baum-Welch per user (privacy baseline)
-  [2] FedAvg-HMM      : Algorithm 2 — weighted parameter averaging
-  [3] FedEM-HMM       : Algorithm 1 — raw sufficient-statistics aggregation
-  [4] Personalised    : Algorithm 3 — FedEM global + local fine-tuning + α-interpolation
+  [1] Centralised             : Baum-Welch on all pooled data (oracle upper bound)
+  [2] Local-HMM               : independent Baum-Welch per user (privacy baseline)
+  [3] FedAvg-HMM              : weighted parameter averaging
+  [4] FedEM-HMM               : raw sufficient-statistics aggregation
+  [5] Personalised (DITTO)    : FedEM global + local fine-tuning + α-interpolation
+  [6] FedProx-HMM             : FedAvg with proximal regularisation (Li et al., 2020).
+  [7] FedMA-HMM               : Federated Matched Averaging for HMMs
+  [8] CoordMedian-HMM         : Coordinate-wise median aggregation (Yin et al., 2018).
+
 
 Mathematics (matching the paper exactly)
 -----------------------------------------
@@ -34,5 +38,6 @@ Usage
 
   Default output: fedhmm_results.xlsx
 """
+
 
  ================================================================
